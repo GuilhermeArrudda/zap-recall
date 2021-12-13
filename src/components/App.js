@@ -1,9 +1,9 @@
-import Login from "./Login";
+import CarregaPagina from "./CarregaPagina";
 
 export default function App() {
   return (
     <>
-      <Login />
+      <CarregaPagina />
     </>
   );
 }

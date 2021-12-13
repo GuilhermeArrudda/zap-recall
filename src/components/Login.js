@@ -1,26 +1,26 @@
-import { useState } from "react";
-import Deck from "./Decks.js";
+import Logo from "../assets/logo.png";
+import Next from "../assets/next.png";
 
-export default function Login() {
-    const [entrar, setEntrar] = useState(false);
-
-    const verDeck = () => {
-        setEntrar(true);
-    }
-
+export default function Login({ setQuestionId, setClicked }) {
+    const Logar = () => {
+      setQuestionId(1);
+      setClicked(true);
+    };
+  
     return (
-        <>
-        {entrar ? (
-            <Decks />
-        ) : (
-        <section class="pagina-inicial">
-            <img src="assets/logo.png" alt="logo da página"/>
-            <button type = "button" data-identifier="start-zap-recall" onClick={verDeck}>
-                <span>Praticar React</span>
-                <img src="assets/next.png" alt="logo next"/>
-            </button>
-        </section>
-        )}
-        </>
+      <>
+        <div className="pagina-inicial">
+          <img src={Logo} alt="main-logo" />
+          <button
+            type="button"
+            className="logando"
+            data-identifier="start-zap-recall"
+            onClick={Logar}
+          >
+            <p>Praticar React</p>
+            <img src={Next} alt="next" />
+          </button>
+        </div>
+      </>
     );
-}
+  }
